@@ -1,0 +1,31 @@
+<div class="container">
+  
+  <p>Change OMR Data</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Question</th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let question of questions; let i = index">
+      <td>{{i + 1}}</td>
+      <td>
+        <input type="text" [(ngModel)]="question.title" required placeholder="Enter Question Title">
+      </td>
+      <td><input type="checkbox" [(ngModel)]="question.options.A"></td>
+      <td><input type="checkbox" [(ngModel)]="question.options.B"></td>
+      <td><input type="checkbox" [(ngModel)]="question.options.C"></td>
+      <td><input type="checkbox" [(ngModel)]="question.options.D"></td>
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="updateform()">Save</button>
+</div>

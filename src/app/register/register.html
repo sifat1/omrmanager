@@ -1,0 +1,9 @@
+<div>
+<div class="register-container">
+    <h1>Register</h1>
+    <input type="text" [formControl]="name" placeholder="Name" required>
+    <input type="email" [formControl]="email" placeholder="Email" required email>
+    <input type="password" [formControl]="password" placeholder="Password" required minlength="6">
+    <input type="password" [formControl]="conformPassword" placeholder="Confirm Password" required minlength="6">
+    <button class="registerbutton" (click)="submit()">Register</button>
+</div>
